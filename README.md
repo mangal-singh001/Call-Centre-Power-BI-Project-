@@ -18,6 +18,11 @@ This dashboard answers all of the above through clean visuals and KPI tracking.
 
 ---
 
+## 📸 Dashboard Preview  
+![Call Centre Dashboard](Dashboard.png)
+
+---
+
 ## 📂 Dataset
 
 * **Source**: Call Center dataset (CSV)
