@@ -1,134 +1,112 @@
 # 📞 Call Centre Performance Dashboard – Power BI
 
-A professional **Power BI dashboard** to analyze call-centre performance and customer experience.
-This project helps understand agent productivity, call trends, customer sentiment, and service efficiency to support better decision-making.
+A professional **Power BI Dashboard** analyzing call-centre performance across states, channels, sentiment, and time.
+This report provides actionable insights to improve **service efficiency**, **customer satisfaction**, and **agent effectiveness**.
 
 ---
 
 ## 🎯 Project Overview
 
-Call centers handle thousands of interactions daily. To ensure efficiency and customer satisfaction, it’s essential to monitor:
-✅ Call volume trends
-✅ Agent performance
-✅ Customer sentiment & satisfaction
-✅ Resolution rates & SLA compliance
-✅ Peak call hours & channel insights
+Call centres handle hundreds of calls daily. This dashboard monitors operational efficiency and customer experience, helping identify:
 
-This dashboard answers all of the above through clean visuals and KPI tracking.
+✅ Total call volume & day-wise trends
+✅ Call duration & average call time
+✅ Call channel usage (Phone / Chat / Email / Web)
+✅ Response rate & service performance
+✅ Customer sentiment distribution
+✅ State-wise call patterns
+✅ Top reasons for calls
+✅ City-wise call-center performance
 
 ---
 
-## 📸 Dashboard Preview  
+## 📸 Dashboard Preview
+
 ![Call Centre Dashboard](Dashboard.png)
+
+---
+
+## 📊 Key Metrics (KPIs)
+
+| KPI                                   | Description                 |
+| ------------------------------------- | --------------------------- |
+| 📞 **Total Calls**                    | 32.94K calls handled        |
+| ⏳ **Call Duration (Hours)**           | 13.74K hours spent on calls |
+| 🕑 **Sum of Call Duration (Minutes)** | 824.22K minutes             |
+| ⏱ **Average Call Duration**           | 25.02 minutes per call      |
+| ⚡ **Response Time %**                 | 75.26%                      |
+
+---
+
+## 📈 Visual Insights
+
+| Insight Panel                      | Details                                              |
+| ---------------------------------- | ---------------------------------------------------- |
+| 📅 **Calls by Day**                | Highest on Thu/Fri (5.5K+)                           |
+| 🗺️ **Calls by State**             | US map with state-wise volume                        |
+| 📦 **Top Call Reasons**            | Billing, Payments, Service related queries dominate  |
+| 🎧 **Calls by Channel**            | Phone = highest usage, followed by Email, Web & Chat |
+| 😊 **Customer Sentiment**          | Majority **Negative**, followed by Neutral           |
+| 🏢 **Calls by Call-Centre (City)** | LA (14K) highest, Baltimore & Chicago follow         |
 
 ---
 
 ## 📂 Dataset
 
-* **Source**: Call Center dataset (CSV)
-* **File**: `Call Center_Call Center.csv`
-* **Tool Used**: Power BI Desktop
+| Detail     | Value                                             |
+| ---------- | ------------------------------------------------- |
+| Source     | Call Centre Generated Dataset (CSV)               |
+| Files Used | `Call Center_Call Center.csv`, `Call Centre.pbix` |
+| Tool       | Power BI Desktop                                  |
+
+Filters Used
+
+* 📅 Date Range
+* 📡 Channel
+* 🏙️ City
 
 ---
 
-## 🔧 Data Cleaning & Preparation
+## 🧼 Data Preparation
 
-🧼 Handled missing values & inconsistent formats
-🕒 Extracted date & hour from datetime
-🎭 Standardized call types & sentiment categories
-🔗 Built fact-to-dimension relationships
-📐 Created calculated columns for time & performance metrics
+✔ Cleaned and formatted date/time columns
+✔ Standardized sentiment & channel categories
+✔ Created calculated duration columns
+✔ Built relationships for time, state & channel analysis
 
----
-
-## 💡 Key Metrics & DAX Measures
-
-| Metric                               | Description                     |
-| ------------------------------------ | ------------------------------- |
-| 📞 **Total Calls**                   | Total number of calls received  |
-| 📈 **Answered Calls%**               | % of calls successfully handled |
-| 📉 **Missed Calls**                  | Calls not answered              |
-| ⏳ **Average Handle Time (AHT)**      | Average call duration           |
-| ⚡ **Service Level %**                | Calls answered under SLA        |
-| 😊 **CSAT**                          | Customer satisfaction score     |
-| 🎯 **First Call Resolution % (FCR)** | Issues resolved on first call   |
-
-**Sample DAX**
-
-```DAX
-Total Calls = COUNTROWS(Calls)
-
-Answered Calls = CALCULATE([Total Calls], Calls[Answered_Flag] = TRUE())
-
-Response Rate % = DIVIDE([Answered Calls], [Total Calls], 0)
-```
 
 ---
 
-## 📊 Dashboard Highlights
+## 🧾 Insights
 
-✨ KPI Cards (Calls, SLA, CSAT, FCR)
-📈 Trend analytics (daily/weekly/monthly)
-🌎 Regional performance charts
-🎧 Agent leaderboard
-💬 Customer sentiment visualization
-⏱ Peak hour analysis
-
----
-
-## 🧠 Insights
-
-* 🚀 **High call traffic** observed between **10 AM – 12 PM**
-* 😟 Slight dip in **CSAT during peak hours**
-* 🎤 Certain agents show **higher call resolution efficiency**
-* 🔁 A few call categories show **repeat customer queries → improvement area**
-
-*(Update these based on your final findings)*
-
----
-
-## 📁 Folder Structure
-
-```
-📁 repository
- ┣ 📄 Call Centre.pbix
- ┣ 📄 Call Center_Call Center.csv
- ┣ 🖼 Dashboard Screenshot (optional)
- ┗ 📄 README.md
-```
-
----
-
-## 🛠 Tech Stack
-
-| Tool        | Purpose                   |
-| ----------- | ------------------------- |
-| Power BI    | Visualization & reporting |
-| Power Query | Data cleaning             |
-| DAX         | Calculation measures      |
-| CSV         | Data source               |
+* 📈 **Call volume peaks Thu–Fri**
+* 🏙️ **LA call-centre handles the highest calls**
+* 💬 **Phone remains primary communication channel**
+* 😕 **Negative sentiment highest → improvement needed**
+* 💳 **Billing & Payment queries most common**
 
 ---
 
 ## 🚀 Future Enhancements
 
-* Real-time call monitoring using API
-* AI-based sentiment analysis from transcripts
-* Forecast call volume using ML
-* Automated alert system for SLA breach
+* Predictive call volume forecast (ML models)
+* Real-time dashboard with API data
+* Agent performance scoring system
+* Sentiment analysis using transcripts
 
 ---
 
 ## 👤 Author
 
 **Mangal Singh**
-🌐 GitHub: **github.com/mangal-singh001**
-🔗 LinkedIn: **https://www.linkedin.com/in/mangal-singh123/**
+
+🌐 GitHub: [https://github.com/mangal-singh001](https://github.com/mangal-singh001)
+🔗 LinkedIn: [https://www.linkedin.com/in/mangal-singh123/](https://www.linkedin.com/in/mangal-singh123/)
 
 ---
 
 ## ⭐ Support
 
-If you like this project, please give it a ⭐ on GitHub!
+If you found this useful, please give the repo a **⭐ star** to support!
 
 ---
