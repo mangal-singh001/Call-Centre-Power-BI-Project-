@@ -1,100 +1,140 @@
+Here is the updated README with **no Table of Contents** and added emojis 🚀📞📊✨✅👇
+
+---
+
 # 📞 Call Centre Performance Dashboard – Power BI
 
-A professional Power BI project that analyzes call-centre operations and customer experience metrics. This README explains the business problem, data model, transformations, DAX measures, and how to run the report.
+A professional **Power BI dashboard** to analyze call-centre performance and customer experience.
+This project helps understand agent productivity, call trends, customer sentiment, and service efficiency to support better decision-making.
 
 ---
 
-## 🔗 Repository
+## 🎯 Project Overview
 
-**Project URL:** [https://github.com/mangal-singh001/Call-Centre-Power-BI-Project-](https://github.com/mangal-singh001/Call-Centre-Power-BI-Project-)
+Call centers handle thousands of interactions daily. To ensure efficiency and customer satisfaction, it’s essential to monitor:
+✅ Call volume trends
+✅ Agent performance
+✅ Customer sentiment & satisfaction
+✅ Resolution rates & SLA compliance
+✅ Peak call hours & channel insights
 
-> Tip: Keep raw data, Power Query/DAX notes, and screenshots inside this repo so anyone can reproduce the dashboard easily.
-
----
-
-## 🧭 Table of Contents
-
-* [About the Project](#about-the-project)
-* [Business Questions / KPIs](#business-questions--kpis)
-* [Data Sources & Structure](#data-sources--structure)
-* [Data Cleaning & Transformations (Power Query)](#data-cleaning--transformations-power-query)
-* [Data Model](#data-model)
-* [Key DAX Measures](#key-dax-measures)
-* [Report Pages & Highlights](#report-pages--highlights)
-* [How to Use / Reproduce](#how-to-use--reproduce)
-* [Folder Structure](#folder-structure)
-* [Results & Insights](#results--insights)
-* [Future Improvements](#future-improvements)
-* [Screenshots](#screenshots)
-* [Tech Stack](#tech-stack)
-* [Author](#author)
-* [License](#license)
+This dashboard answers all of the above through clean visuals and KPI tracking.
 
 ---
 
-## 📙 About the Project
+## 📂 Dataset
 
-Call centres generate high volumes of interaction and service data. This dashboard tracks operational efficiency and customer satisfaction across time, channels, regions, and agents. It helps decision-makers identify bottlenecks, improve response rates, and optimize staffing.
-
-**What this dashboard covers:**
-
-* Total call volume and answered vs. missed calls
-* Average call duration & response time %
-* First Call Resolution (FCR) & SLA compliance
-* Customer sentiment & CSAT (customer satisfaction) trends
-* Top call reasons & interaction channels
-* Performance by agent, team, and region
+* **Source**: Call Center dataset (CSV)
+* **File**: `Call Center_Call Center.csv`
+* **Tool Used**: Power BI Desktop
 
 ---
 
-## 🎯 Business Questions / KPIs
+## 🔧 Data Cleaning & Preparation
 
-**Primary KPIs**
-
-* **Total Calls**
-* **Answered Calls** & **Missed Calls**
-* **Response Rate %** = Answered / Total Calls
-* **Average Handle Time (AHT)**
-* **Average Speed of Answer (ASA)**
-* **First Call Resolution (FCR) %**
-* **Service Level (SLA) Compliance %**
-* **Customer Satisfaction (CSAT)**
-* **Repeat Call Rate %**
-
-**Secondary Views**
-
-* Calls by **Channel** (Phone, Chat, Email, etc.)
-* Calls by **Reason/Category**
-* Performance by **Region/City**
-* **Peak Hours / Day-of-Week** patterns
-* **Agent-level** efficiency & quality metrics
+🧼 Handled missing values & inconsistent formats
+🕒 Extracted date & hour from datetime
+🎭 Standardized call types & sentiment categories
+🔗 Built fact-to-dimension relationships
+📐 Created calculated columns for time & performance metrics
 
 ---
 
-## 🗂️ Data Sources & Structure
+## 💡 Key Metrics & DAX Measures
 
-* **Format:** CSV/Excel (replace if different)
-* **Typical fields (example):**
+| Metric                               | Description                     |
+| ------------------------------------ | ------------------------------- |
+| 📞 **Total Calls**                   | Total number of calls received  |
+| 📈 **Answered Calls%**               | % of calls successfully handled |
+| 📉 **Missed Calls**                  | Calls not answered              |
+| ⏳ **Average Handle Time (AHT)**      | Average call duration           |
+| ⚡ **Service Level %**                | Calls answered under SLA        |
+| 😊 **CSAT**                          | Customer satisfaction score     |
+| 🎯 **First Call Resolution % (FCR)** | Issues resolved on first call   |
 
-  * `Call_ID`, `DateTime`, `Agent_ID`, `Agent_Name`, `Channel`, `Region`, `Call_Reason`, `Call_Duration_Seconds`, `Answered_Flag`, `First_Resolution_Flag`, `SLA_Met_Flag`, `Customer_Sentiment`, `CSAT_Score`
+**Sample DAX**
 
-> If your schema differs, update this section and the DAX accordingly.
+```DAX
+Total Calls = COUNTROWS(Calls)
+
+Answered Calls = CALCULATE([Total Calls], Calls[Answered_Flag] = TRUE())
+
+Response Rate % = DIVIDE([Answered Calls], [Total Calls], 0)
+```
 
 ---
 
-## 🧹 Data Cleaning & Transformations (Power Query)
+## 📊 Dashboard Highlights
 
-1. **Data Types:** Ensure proper types for dates, durations, flags, and numeric columns.
-2. **Null Handling:** Replace or remove nulls in key columns (e.g., `Answered_Flag`).
-3. **Standardization:**
+✨ KPI Cards (Calls, SLA, CSAT, FCR)
+📈 Trend analytics (daily/weekly/monthly)
+🌎 Regional performance charts
+🎧 Agent leaderboard
+💬 Customer sentiment visualization
+⏱ Peak hour analysis
 
-   * Normalize `Channel` names (e.g., PHONE/phone → "Phone").
-   * Map `Customer_Sentiment` to an ordered category (Negative < Neutral < Positive).
-4. **Derived Columns:**
+---
 
-   * **Date** (from `DateTime`)
-   * **Hour** (0–23) for peak-hour analysis
-   * **Call_Duration_Minutes** = `Call_Duration_Seconds / 60`
-5. **Dim Tables (Optional):** Create `DimDate`, `DimAgent`, `DimRegion` for better modeling.
+## 🧠 Insights
 
-> Keep
+* 🚀 **High call traffic** observed between **10 AM – 12 PM**
+* 😟 Slight dip in **CSAT during peak hours**
+* 🎤 Certain agents show **higher call resolution efficiency**
+* 🔁 A few call categories show **repeat customer queries → improvement area**
+
+*(Update these based on your final findings)*
+
+---
+
+## 📁 Folder Structure
+
+```
+📁 repository
+ ┣ 📄 Call Centre.pbix
+ ┣ 📄 Call Center_Call Center.csv
+ ┣ 🖼 Dashboard Screenshot (optional)
+ ┗ 📄 README.md
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Tool        | Purpose                   |
+| ----------- | ------------------------- |
+| Power BI    | Visualization & reporting |
+| Power Query | Data cleaning             |
+| DAX         | Calculation measures      |
+| CSV         | Data source               |
+
+---
+
+## 🚀 Future Enhancements
+
+* Real-time call monitoring using API
+* AI-based sentiment analysis from transcripts
+* Forecast call volume using ML
+* Automated alert system for SLA breach
+
+---
+
+## 👤 Author
+
+**Mangal Singh**
+🌐 GitHub: **github.com/mangal-singh001**
+🔗 LinkedIn: *(add link here)*
+
+---
+
+## ⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub!
+
+---
+
+If you'd like, I can also:
+✨ Add badges for GitHub stats
+📸 Create a banner for your repo
+💬 Write LinkedIn post caption for this project
+
+Just tell me! Want me to generate the banner now? 🎨🖼️
