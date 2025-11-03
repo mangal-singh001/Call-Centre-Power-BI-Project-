@@ -101,6 +101,7 @@ Filters Used
 **Mangal Singh**
 
 🌐 GitHub: [https://github.com/mangal-singh001](https://github.com/mangal-singh001)
+
 🔗 LinkedIn: [https://www.linkedin.com/in/mangal-singh123/](https://www.linkedin.com/in/mangal-singh123/)
 
 ---
