@@ -1,7 +1,3 @@
-Here is the updated README with **no Table of Contents** and added emojis 🚀📞📊✨✅👇
-
----
-
 # 📞 Call Centre Performance Dashboard – Power BI
 
 A professional **Power BI dashboard** to analyze call-centre performance and customer experience.
@@ -122,7 +118,7 @@ Response Rate % = DIVIDE([Answered Calls], [Total Calls], 0)
 
 **Mangal Singh**
 🌐 GitHub: **github.com/mangal-singh001**
-🔗 LinkedIn: *(add link here)*
+🔗 LinkedIn: **https://www.linkedin.com/in/mangal-singh123/**
 
 ---
 
@@ -131,10 +127,3 @@ Response Rate % = DIVIDE([Answered Calls], [Total Calls], 0)
 If you like this project, please give it a ⭐ on GitHub!
 
 ---
-
-If you'd like, I can also:
-✨ Add badges for GitHub stats
-📸 Create a banner for your repo
-💬 Write LinkedIn post caption for this project
-
-Just tell me! Want me to generate the banner now? 🎨🖼️
